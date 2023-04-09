@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/RakeshRocky220/student-frontend/static/css/main.d8338bd7.css",
-    "main.js": "/RakeshRocky220/student-frontend/static/js/main.92253568.js",
-    "static/js/787.cbef9b6b.chunk.js": "/RakeshRocky220/student-frontend/static/js/787.cbef9b6b.chunk.js",
-    "static/media/fontawesome-webfont.svg?v=4.7.0": "/RakeshRocky220/student-frontend/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
-    "static/media/fontawesome-webfont.eot": "/RakeshRocky220/student-frontend/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
-    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/RakeshRocky220/student-frontend/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
-    "static/media/fontawesome-webfont.woff?v=4.7.0": "/RakeshRocky220/student-frontend/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
-    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/RakeshRocky220/student-frontend/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
-    "static/media/graduate.png": "/RakeshRocky220/student-frontend/static/media/graduate.7a8ad24583595b982d7a.png",
-    "static/media/teacher.png": "/RakeshRocky220/student-frontend/static/media/teacher.4c841bdb4fa5defc5b86.png",
-    "static/media/graduation.png": "/RakeshRocky220/student-frontend/static/media/graduation.320529e0a3b0c4b0a1ac.png",
-    "index.html": "/RakeshRocky220/student-frontend/index.html",
-    "main.d8338bd7.css.map": "/RakeshRocky220/student-frontend/static/css/main.d8338bd7.css.map",
-    "main.92253568.js.map": "/RakeshRocky220/student-frontend/static/js/main.92253568.js.map",
-    "787.cbef9b6b.chunk.js.map": "/RakeshRocky220/student-frontend/static/js/787.cbef9b6b.chunk.js.map"
+    "main.css": "/student-frontend/static/css/main.df0c4381.css",
+    "main.js": "/student-frontend/static/js/main.7572aa95.js",
+    "static/js/787.cbef9b6b.chunk.js": "/student-frontend/static/js/787.cbef9b6b.chunk.js",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/student-frontend/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fontawesome-webfont.eot": "/student-frontend/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/student-frontend/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/student-frontend/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/student-frontend/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/graduate.png": "/student-frontend/static/media/graduate.7a8ad24583595b982d7a.png",
+    "static/media/teacher.png": "/student-frontend/static/media/teacher.4c841bdb4fa5defc5b86.png",
+    "static/media/graduation.png": "/student-frontend/static/media/graduation.320529e0a3b0c4b0a1ac.png",
+    "index.html": "/student-frontend/index.html",
+    "main.df0c4381.css.map": "/student-frontend/static/css/main.df0c4381.css.map",
+    "main.7572aa95.js.map": "/student-frontend/static/js/main.7572aa95.js.map",
+    "787.cbef9b6b.chunk.js.map": "/student-frontend/static/js/787.cbef9b6b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8338bd7.css",
-    "static/js/main.92253568.js"
+    "static/css/main.df0c4381.css",
+    "static/js/main.7572aa95.js"
   ]
 }
