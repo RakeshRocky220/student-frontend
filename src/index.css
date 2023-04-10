@@ -1,13 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap');
+   
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Baloo Bhai 2';
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#rakesh{
+  color: rgb(255, 178, 192);
+}
+#join{
+  border-radius: 10px;
+  height: 100px;
+  width: 480px;
+  position: relative;
+  top: -30px;
+  left: 35px;
+  box-shadow: inset 0.5px 0.5px 15px 3px black;
+  background: linear-gradient(340deg,#EE9CA7,#FFDDE1);
+  font-family: 'Baloo Bhai 2';
+}
+.font{
+  font-family: 'Baloo Bhai 2';
+}
+.round{
+  width:440px;
+  height:100px;
+ border: 2px solid black;
+}
+.gradient1{
+  font-weight: bolder;
+  font-family: 'Baloo Bhai 2';
+  background: linear-gradient(to right, #000000, #ff6060);
+ background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
