@@ -1621,7 +1621,7 @@
     "schema-utils" "^3.0.0"
     "source-map" "^0.7.3"
 
-"@popperjs/core@^2.11.6":
+"@popperjs/core@^2.10.1", "@popperjs/core@^2.11.6":
   "integrity" "sha512-Cr4OjIkipTtcXKjAsm8agyleBuDHvxzeBoa1v543lbv1YaIwQjESsVcmjiWiPEbC1FIeHOG/Op9kdCmAmiS3Kw=="
   "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.11.7.tgz"
   "version" "2.11.7"
@@ -3363,10 +3363,10 @@
   "resolved" "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz"
   "version" "1.0.0"
 
-"bootstrap@^5.2.3":
-  "integrity" "sha512-cEKPM+fwb3cT8NzQZYEu4HilJ3anCrWqh3CHAok1p9jXqMPsPTBhU25fBckEJHJ/p+tTxTFTsFQGM+gaHpi3QQ=="
-  "resolved" "https://registry.npmjs.org/bootstrap/-/bootstrap-5.2.3.tgz"
-  "version" "5.2.3"
+"bootstrap@^5.1.1":
+  "integrity" "sha512-/jUa4sSuDZWlDLQ1gwQQR8uoYSvLJzDd8m5o6bPKh3asLAMYVZKdRCjb1joUd5WXf0WwCNzd2EjwQQhupou0dA=="
+  "resolved" "https://registry.npmjs.org/bootstrap/-/bootstrap-5.1.1.tgz"
+  "version" "5.1.1"
 
 "brace-expansion@^1.1.7":
   "integrity" "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA=="
@@ -5359,7 +5359,7 @@
     "lodash" "^4.17.21"
     "string-natural-compare" "^3.0.1"
 
-"eslint-plugin-import@^2.25.3":
+"eslint-plugin-import@^2.25.3", "eslint-plugin-import@^2.27.5":
   "integrity" "sha512-LmEt3GVofgiGuiE+ORpnvP+kAm3h6MLZJ4Q5HCyHADofsb4VzXFsRiWj3c0OFiV+3DWFh0qg3v9gcPlfc3zRow=="
   "resolved" "https://registry.npmjs.org/eslint-plugin-import/-/eslint-plugin-import-2.27.5.tgz"
   "version" "2.27.5"
@@ -7963,10 +7963,10 @@
     "import-local" "^3.0.2"
     "jest-cli" "^27.5.1"
 
-"jquery@^3.6.4":
-  "integrity" "sha512-v28EW9DWDFpzcD9O5iyJXg3R3+q+mET5JhnjJzQUZMHOv67bpSIHq81GEYpPNZHG+XXHsfSme3nxp/hndKEcsQ=="
-  "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.6.4.tgz"
-  "version" "3.6.4"
+"jquery@^3.6.0":
+  "integrity" "sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw=="
+  "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz"
+  "version" "3.6.0"
 
 "js-sdsl@^4.1.4":
   "integrity" "sha512-FfVSdx6pJ41Oa+CF7RDaFmTnCaFhua+SNYQX74riGOpl96x+2jQCqEfQ2bnXu/5DPCqlRuiqyvTJM0Qjz26IVg=="
@@ -10228,10 +10228,10 @@
     "regenerator-runtime" "^0.13.9"
     "whatwg-fetch" "^3.6.2"
 
-"react-bootstrap@^2.7.2":
-  "integrity" "sha512-WDSln+mG4RLLFO01stkj2bEx/3MF4YihK9D/dWnHaSxOiQZLbhhlf95D2Jb20X3t2m7vMxRe888FVrfLJoGmmA=="
-  "resolved" "https://registry.npmjs.org/react-bootstrap/-/react-bootstrap-2.7.2.tgz"
-  "version" "2.7.2"
+"react-bootstrap@^2.7.3":
+  "integrity" "sha512-MhQq+YENiMwnO8MblF96PYAVpb6V6slOjUs6+v/RthTI8zzNkAZmBe7EfXiRtQFvFpM/h16YK4ruaqh9zhlR8Q=="
+  "resolved" "https://registry.npmjs.org/react-bootstrap/-/react-bootstrap-2.7.3.tgz"
+  "version" "2.7.3"
   dependencies:
     "@babel/runtime" "^7.17.2"
     "@restart/hooks" "^0.4.6"

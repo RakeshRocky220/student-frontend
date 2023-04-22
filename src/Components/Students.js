@@ -2,6 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import $ from 'jquery'
+import jQuery from 'jquery';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 const Student=()=>{
     const p=useParams()
@@ -30,7 +31,11 @@ const Student=()=>{
       setPhysics(physics)
       setStandard(standard)
       setName(sname)
-      $('#myModal').modal('show');
+      jQuery(()=> {
+        jQuery('#myModal').modal('show');
+      });
+      
+     
     }
 
 
