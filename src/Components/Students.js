@@ -21,7 +21,7 @@ const Student=()=>{
     const func1=(p1)=>{
       const t1 = res.filter(i => i.sid == p1)
       const t2 = t1[0]
-      const { sid, sname, password, fee,maths,physics,chemistry,mobno,standard } = t2
+      const { sid,sname, password, fee,maths,physics,chemistry,mobno,standard } = t2
       setId(sid)
       setFee(fee)
       setChemistry(chemistry)
@@ -31,9 +31,10 @@ const Student=()=>{
       setPhysics(physics)
       setStandard(standard)
       setName(sname)
-      jQuery(()=> {
-        jQuery('#myModal').modal('show');
-      });
+      (function($) {
+        // Your code that uses the $ symbol goes here
+        $('#myModal').modal('show');
+      })(jQuery);
       
      
     }
@@ -160,7 +161,7 @@ return (
                 
                 </div>
             </div>
-        <div style={{background:`linear-gradient(45deg,rgb(243, 142, 137),rgb(255, 209, 207))`,paddingBottom:`10px`,width:`95%`}} className="p-3 row rounded 30px mx-1  mt-2">
+        <div style={{paddingBottom:`10px`,width:`95%`}} className="p-3 row rounded 30px mx-1  mt-2">
            
             <div className="row mt-2"><div className="col-auto">
             {

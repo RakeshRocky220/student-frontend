@@ -89,7 +89,7 @@ setTeacher(d1)
 return(
 <>
 <div className="container p-4" >
-    <div  style={{background:`linear-gradient(45deg,rgb(243, 142, 137),rgb(255, 209, 207))`,paddingBottom:`10px`,width:`95%`}} className="row rounded 30px mx-4  mt-2">
+    <div  style={{background:`linear-gradient(45deg,rgb(255, 209, 207),rgb(255, 209, 207))`,paddingBottom:`10px`,width:`95%`}} className="row rounded 30px mx-4  mt-2">
         <div style={{width:`1000px`,marginLeft:`1px`}} className="row  ">
         <div className="col-5 mx-3">
             <h1 className="font  text-center gradient1 mt-2"><i style={{color:`black`}} className="fa fa-user-plus mt-2" aria-hidden="true"></i>AddStudent</h1>
@@ -176,9 +176,9 @@ return(
         <div className="form-group mt-2">
             <input type={"number"} ref={chemistry} className="w-75 form-control" placeholder="Enter Marks in chemistry" ></input>
         </div>
-        <div className="form-group mt-3 mx-5">
-        <button className="btn btn-danger mx-5 ">Reset</button>
-           <button className="btn btn-success mx-4" onClick={registerStudent}>Register</button>
+        <div style={{marginLeft:`230px`}} className="form-group mt-3 ">
+        <button className="btn btn-danger mx-1 ">Reset</button>
+           <button className="btn btn-success" onClick={registerStudent}>Register</button>
         </div>
   </div>
 </div>
