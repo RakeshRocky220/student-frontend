@@ -20,7 +20,7 @@ return(
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
         <li className="nav-item">
-          <NavLink className="nav-link active gradient mt-4" aria-current="page" to="/"><p >Home</p></NavLink>
+          <NavLink className="nav-link active gradient mt-4" aria-current="page" to="/student-frontend"><p >Home</p></NavLink>
         </li>
         <li className="nav-item">
           <NavLink className="nav-link gradient mt-4" to="/login">Login</NavLink>
@@ -40,7 +40,7 @@ return(
 </nav>
 
 <Routes>
-<Route path="/" element={<Register></Register>}>
+<Route path="/student-frontend" element={<Register></Register>}>
 
 </Route>
 <Route path="/login" element={<Login></Login>}>
