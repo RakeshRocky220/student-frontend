@@ -1,7 +1,10 @@
 import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import stud from '../assets/stud.jpg'
 const Register = () => {
+
+  const navigate = useNavigate()
   const tid = useRef(0);
   const tname = useRef("");
   const password = useRef("");
@@ -48,11 +51,15 @@ const Register = () => {
       setImage(reader.result);
     };
   };
+
+  const goto = () => {
+    navigate("/login")
+  }
   return (
     <>
-     
 
-     {Object.keys(obj) == 0 ? (
+
+      {Object.keys(obj) == 0 ? (
         <div
           id="alert"
           style={{
@@ -86,91 +93,92 @@ const Register = () => {
         </div>
       )}
 
-        <div className="row m-3">
-          <div className="col-6 mt-5 font">
-            
-          
+      <div className="row m-3">
+        <div className="col-6 mt-5 font">
 
-           <img 
-           className="mt-5 mx-5"
-           style={{
-            borderRadius:30,
-            height:240,
-            width:440
-           }}
-           src={stud}></img>
-           <button className="btn btn-success"
-           style={{position:`relative`,top:`10%`,left:`50%`,transform:`translate(-50%,-50%)`}}
-           >Sign in</button>
-          </div>
-          <div className="col-6 p-4 font rounded 30px">
-         
+
+
+          <img
+            className="mt-5 mx-5"
+            style={{
+              borderRadius: 30,
+              height: 240,
+              width: 440
+            }}
+            src={stud}></img>
+          <button className="btn btn-success"
+            onClick={goto}
+            style={{ position: `relative`, top: `10%`, left: `50%`, transform: `translate(-50%,-50%)` }}
+          >Sign in</button>
+        </div>
+        <div className="col-6 p-4 font rounded 30px">
+
           <center>
-          <h3 className="font">Teacher Register Here</h3>
-        </center>
+            <h3 className="font">Teacher Register Here</h3>
+          </center>
           <div className="form-group mt-2">
-              
+
+            <input
+              type={"number"}
+              ref={tid}
+              placeholder="Enter Teacher Id"
+              className="form-control form-control-sm  "
+            ></input>
+          </div>
+          <div className="form-group mt-2">
+            <input
+              type={"text"}
+              ref={tname}
+              placeholder="Enter Teacher name"
+              className="form-control form-control-sm   "
+            ></input>
+          </div>
+          <div className="form-group mt-2">
+            <input
+              type={"password"}
+              placeholder="Enter Password"
+              ref={password}
+              className="form-control form-control-sm "
+            ></input>
+          </div>
+          <div className="form-group mt-2">
+            <input
+              type={"number"}
+              ref={mobno}
+              placeholder="Enter mobile number"
+              className="form-control form-control-sm "
+            ></input>
+          </div>
+          <div className="form-group mt-3">
+            <label htmlFor="radio-group">Gender</label>&emsp;
+            <div className="form-check-inline">
               <input
-                type={"number"}
-                ref={tid}
-                placeholder="Enter Teacher Id"
-                className="form-control form-control-sm  "
-              ></input>
+                className="form-check-input"
+                ref={gender}
+                type="radio"
+                name="radio-group"
+                id="radio-option1"
+                value="Male"
+              />
+              <label className="form-check-label mx-2" htmlFor="radio-option1">
+                Male
+              </label>
             </div>
-            <div className="form-group mt-2">
+            <div className="form-check-inline">
               <input
-                type={"text"}
-                ref={tname}
-                placeholder="Enter Teacher name"
-                className="form-control form-control-sm   "
-              ></input>
+                className="form-check-input"
+                ref={gender}
+                type="radio"
+                name="radio-group"
+                id="radio-option2"
+                value="Female"
+              />
+              <label className="form-check-label mx-2" htmlFor="radio-option2">
+                Female
+              </label>
             </div>
-            <div className="form-group mt-2">
-              <input
-                type={"password"}
-                placeholder="Enter Password"
-                ref={password}
-                className="form-control form-control-sm "
-              ></input>
-            </div>
-            <div className="form-group mt-2">
-              <input
-                type={"number"}
-                ref={mobno}
-                placeholder="Enter mobile number"
-                className="form-control form-control-sm "
-              ></input>
-            </div>
-            <div className="form-group mt-3">
-              <label htmlFor="radio-group">Gender</label>&emsp;
-              <div className="form-check-inline">
-                <input
-                  className="form-check-input"
-                  ref={gender}
-                  type="radio"
-                  name="radio-group"
-                  id="radio-option1"
-                  value="Male"
-                />
-                <label className="form-check-label mx-2" htmlFor="radio-option1">
-                  Male
-                </label>
-              </div>
-              <div className="form-check-inline">
-                <input
-                  className="form-check-input"
-                  ref={gender}
-                  type="radio"
-                  name="radio-group"
-                  id="radio-option2"
-                  value="Female"
-                />
-                <label className="form-check-label mx-2" htmlFor="radio-option2">
-                  Female
-                </label>
-              </div>
             <div className="form-group ">
-             
+
               <input
                 type={"email"}
                 ref={email}
@@ -186,22 +194,22 @@ const Register = () => {
               ></input>
             </div>
             <div className="form-group mt-2">
-         <select className="form-select w-100 form-select-sm" ref={head}>
-            <option value="">--Select a Standard--</option>
-            <option value="1st">1st</option>
-            <option value="2nd">2nd</option>
-            <option value="3rd">3rd</option>
-            <option value="4th">4th</option>
-            <option value="5th">5th</option>
-            <option value="6th">6th</option>
-            <option value="7th">7th</option>
-            <option value="8th">8th</option>
-            <option value="9th">9th</option>
-            <option value="10th">10th</option>
-          </select>
-        </div> 
+              <select className="form-select w-100 form-select-sm" ref={head}>
+                <option value="">--Select a Standard--</option>
+                <option value="1st">1st</option>
+                <option value="2nd">2nd</option>
+                <option value="3rd">3rd</option>
+                <option value="4th">4th</option>
+                <option value="5th">5th</option>
+                <option value="6th">6th</option>
+                <option value="7th">7th</option>
+                <option value="8th">8th</option>
+                <option value="9th">9th</option>
+                <option value="10th">10th</option>
+              </select>
+            </div>
             <div className="form-group mt-2">
-             
+
               <input
                 type={"number"}
                 ref={salary}
@@ -217,17 +225,17 @@ const Register = () => {
                 className="form-control form-control-sm"
               ></input>
             </div>
-            <div style={{marginLeft:`185px`}} id="btn1" className="form-group mt-3 ">
-            <button className="btn btn-success " id="btn" onClick={register}>
-              Register
-            </button>
-            <button className="btn btn-danger mx-5">Clear</button>
+            <div style={{ marginLeft: `185px` }} id="btn1" className="form-group mt-3 ">
+              <button className="btn btn-success " id="btn" onClick={register}>
+                Register
+              </button>
+              <button className="btn btn-danger mx-5">Clear</button>
+            </div>
           </div>
-          </div>
-          </div>
-          
         </div>
-     
+
+      </div>
+
     </>
   );
 };
