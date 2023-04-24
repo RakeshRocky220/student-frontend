@@ -18,8 +18,7 @@ const Register = () => {
   const [obj, setObj] = useState({});
   const [bool, setBool] = useState(true);
   const register = () => {
-    axios
-      .post("http://localhost:2022/saveTeacher", {
+    axios.post("http://localhost:2022/saveTeacher", {
         tid: tid.current.value,
         tname: tname.current.value,
         password: password.current.value,
@@ -57,126 +56,128 @@ const Register = () => {
   }
   return (
     <>
+<div className="container">
+  {Object.keys(obj) == 0 ? (
+    <div
+      id="alert"
+      style={{
+        visibility: `hidden`,
+        color: `black`,
+        position: `relative`,
+        top: `10px`,
+        left: `50%`,
+        fontSize: `25px`,
+      }}
+      className="fa fa-spinner fa-spin"
+    ></div>
+  ) : (
+    <div
+      className="alert alert-success alert-dismissible mt-2 mx-auto"
+      style={{ maxWidth: `1200px` }}
+      role="alert"
+    >
+      <i
+        style={{ height: 30, width: 30 }}
+        class="fa fa-check-circle"
+        aria-hidden="true"
+      ></i>
+      Student Registration successful
+      <button
+        type={"button"}
+        className="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+  )}
 
-
-      {Object.keys(obj) == 0 ? (
-        <div
-          id="alert"
-          style={{
-            visibility: `hidden`,
-            color: `black`,
-            position: `relative`,
-            top: `10px`,
-            left: `50%`,
-            fontSize: `25px`,
-          }}
-          className="fa fa-spinner fa-spin"
-        ></div>
-      ) : (
-        <div
-          className="alert alert-success alert-dismissible mt-2 mx-3"
-          style={{ width: `1200px` }}
-          role="alert"
-        >
-          <i
-            style={{ height: 30, width: 30 }}
-            class="fa fa-check-circle"
-            aria-hidden="true"
-          ></i>
-          Student Registration successful
-          <button
-            type={"button"}
-            className="btn-close"
-            data-bs-dismiss="alert"
-            aria-label="Close"
-          ></button>
+  <div className="row m-3">
+    <div className="col-md-6 mt-5 font">
+      <img
+        className="mt-5 img-fluid mx-auto d-block"
+        style={{
+          borderRadius: 30,
+          height: `auto`,
+          width: `100%`,
+          maxWidth: `440px`,
+        }}
+        src={stud}
+        alt="student"
+      ></img>
+      <button
+        className="btn btn-success mt-3 mx-auto d-block"
+        onClick={goto}
+      >
+        Sign in
+      </button>
+    </div>
+    <div className="col-md-6 p-4 font rounded-30">
+      <center>
+        <h3 className="font">Teacher Register Here</h3>
+      </center>
+      <div className="form-group mt-2">
+        <input
+          type={"number"}
+          ref={tid}
+          placeholder="Enter Teacher Id"
+          className="form-control form-control-sm"
+        ></input>
+      </div>
+      <div className="form-group mt-2">
+        <input
+          type={"text"}
+          ref={tname}
+          placeholder="Enter Teacher name"
+          className="form-control form-control-sm"
+        ></input>
+      </div>
+      <div className="form-group mt-2">
+        <input
+          type={"password"}
+          placeholder="Enter Password"
+          ref={password}
+          className="form-control form-control-sm"
+        ></input>
+      </div>
+      <div className="form-group mt-2">
+        <input
+          type={"number"}
+          ref={mobno}
+          placeholder="Enter mobile number"
+          className="form-control form-control-sm"
+        ></input>
+      </div>
+      <div className="form-group mt-3">
+        <label htmlFor="radio-group">Gender</label>&emsp;
+        <div className="form-check-inline">
+          <input
+            className="form-check-input"
+            ref={gender}
+            type="radio"
+            name="radio-group"
+            id="radio-option1"
+            value="Male"
+          />
+          <label className="form-check-label mx-2" htmlFor="radio-option1">
+            Male
+          </label>
         </div>
-      )}
-
-      <div className="row m-3">
-        <div className="col-6 mt-5 font">
-
-
-
-          <img
-            className="mt-5 mx-5"
-            style={{
-              borderRadius: 30,
-              height: 240,
-              width: 440
-            }}
-            src={stud}></img>
-          <button className="btn btn-success"
-            onClick={goto}
-            style={{ position: `relative`, top: `10%`, left: `50%`, transform: `translate(-50%,-50%)` }}
-          >Sign in</button>
+        <div className="form-check-inline">
+          <input
+            className="form-check-input"
+            ref={gender}
+            type="radio"
+            name="radio-group"
+            id="radio-option2"
+            value="Female"
+          />
+          <label className="form-check-label mx-2" htmlFor="radio-option2">
+            Female
+          </label>
         </div>
-        <div className="col-6 p-4 font rounded 30px">
+      </div>
+   
 
-          <center>
-            <h3 className="font">Teacher Register Here</h3>
-          </center>
-          <div className="form-group mt-2">
-
-            <input
-              type={"number"}
-              ref={tid}
-              placeholder="Enter Teacher Id"
-              className="form-control form-control-sm  "
-            ></input>
-          </div>
-          <div className="form-group mt-2">
-            <input
-              type={"text"}
-              ref={tname}
-              placeholder="Enter Teacher name"
-              className="form-control form-control-sm   "
-            ></input>
-          </div>
-          <div className="form-group mt-2">
-            <input
-              type={"password"}
-              placeholder="Enter Password"
-              ref={password}
-              className="form-control form-control-sm "
-            ></input>
-          </div>
-          <div className="form-group mt-2">
-            <input
-              type={"number"}
-              ref={mobno}
-              placeholder="Enter mobile number"
-              className="form-control form-control-sm "
-            ></input>
-          </div>
-          <div className="form-group mt-3">
-            <label htmlFor="radio-group">Gender</label>&emsp;
-            <div className="form-check-inline">
-              <input
-                className="form-check-input"
-                ref={gender}
-                type="radio"
-                name="radio-group"
-                id="radio-option1"
-                value="Male"
-              />
-              <label className="form-check-label mx-2" htmlFor="radio-option1">
-                Male
-              </label>
-            </div>
-            <div className="form-check-inline">
-              <input
-                className="form-check-input"
-                ref={gender}
-                type="radio"
-                name="radio-group"
-                id="radio-option2"
-                value="Female"
-              />
-              <label className="form-check-label mx-2" htmlFor="radio-option2">
-                Female
-              </label>
-            </div>
             <div className="form-group ">
 
               <input
@@ -225,7 +226,7 @@ const Register = () => {
                 className="form-control form-control-sm"
               ></input>
             </div>
-            <div style={{ marginLeft: `185px` }} id="btn1" className="form-group mt-3 ">
+            <div  id="btn1" className="form-group mt-3 ">
               <button className="btn btn-success " id="btn" onClick={register}>
                 Register
               </button>
