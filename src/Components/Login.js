@@ -23,7 +23,7 @@ const password1=useRef("")
     setState(true);
   };
   const loginTeacher=()=>{
-    axios.post('http://localhost:2022/loginTeacher',{
+    axios.post('https://RakeshRocky220.github.io/loginTeacher',{
       "email":email.current.value,
       "password":password.current.value
     }).then((p)=>{
