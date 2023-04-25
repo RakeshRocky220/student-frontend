@@ -36,6 +36,13 @@ const Register = () => {
           setBool(false);
           let { data } = p;
           setObj(data);
+          console.log(Object.keys(data)!=0)
+          if(Object.keys(data)!=0){
+            document.getElementById('ale').style.display=`inline-block`
+          }
+          setTimeout(()=>{
+            document.getElementById('ale').style.display=`none`
+          },3000)
         },
         (e) => {
           console.log(e);
@@ -56,8 +63,7 @@ const Register = () => {
   }
   return (
     <>
-<div className="container">
-  {Object.keys(obj) == 0 ? (
+    {Object.keys(obj) == 0 ? (
     <div
       id="alert"
       style={{
@@ -90,7 +96,8 @@ const Register = () => {
       ></button>
     </div>
   )}
-
+<div className="container">
+  
   <div className="row m-3">
     <div className="col-md-6 mt-5 font">
       <img

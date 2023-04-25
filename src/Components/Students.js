@@ -26,7 +26,7 @@ const Student=()=>{
       setFee(fee)
       setChemistry(chemistry)
       setPassword(password)
-      setMaths(maths)
+      setMaths(maths) 
       setMobno(mobno)
       setPhysics(physics)
       setStandard(standard)
