@@ -78,8 +78,8 @@ const Register = () => {
     ></div>
   ) : (
     <div
-      className="alert alert-success alert-dismissible mt-2 mx-auto"
-      style={{ maxWidth: `1200px` }}
+      className="alert alert-success alert-dismissible d-inline-block mt-2 mx-auto"
+      style={{ maxWidth: `1000px` }}
       role="alert"
     >
       <i
@@ -98,7 +98,7 @@ const Register = () => {
   )}
 <div className="container">
   
-  <div className="row m-3">
+  <div className="row">
     <div className="col-md-6 mt-5 font">
       <img
         className="mt-5 img-fluid mx-auto d-block"
