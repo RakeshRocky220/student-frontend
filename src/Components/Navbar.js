@@ -8,10 +8,11 @@ import Attendence from "./Attendence"
 import Students from "./Students"
 import './Nav.css'
 const Navbar=()=>{
+  
 return(
    <>
   
-   <nav style={{height:`70px`}} className="navbar navbar-expand-lg bg-dark rounded 50px m-1 ">
+  <nav style={{zIndex: 1000}} className="navbar navbar-expand-lg bg-dark rounded 50px m-1 fixed-top">
   <div className="container-fluid">
     <NavLink className="navbar-brand gradient" to="#"><i style={{color:`white`,fontSize:`35px`}} className="fa fa-graduation-cap" aria-hidden="true"></i>School</NavLink>
     <button className="navbar-toggler" type={"button"} data-bs-toggle={"collapse"} data-bs-target={"#navbarSupportedContent"} aria-controls={"navbarSupportedContent"} aria-expanded={"false"} aria-label={"Toggle navigation"}>
@@ -28,8 +29,6 @@ return(
         <li className="nav-item">
           <NavLink className="nav-link gradient mt-4" to="/contact">About</NavLink>
         </li>
-       
-        
       </ul>
       <form className="d-flex" role="search">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
@@ -38,6 +37,13 @@ return(
     </div>
   </div>
 </nav>
+
+
+
+
+
+
+
 
 <Routes>
 <Route path="/student-frontend" element={<Register></Register>}>

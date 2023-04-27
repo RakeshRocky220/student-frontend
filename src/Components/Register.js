@@ -96,7 +96,7 @@ const Register = () => {
       ></button>
     </div>
   )}
-<div className="container">
+<div className="container mt-5">
   
   <div className="row">
     <div className="col-md-6 mt-5 font">
@@ -118,7 +118,7 @@ const Register = () => {
         Sign in
       </button>
     </div>
-    <div className="col-md-6 p-4 font rounded-30">
+    <div className="col-md-6 mt-5 p-4 font rounded-30">
       <center>
         <h3 className="font">Teacher Register Here</h3>
       </center>
