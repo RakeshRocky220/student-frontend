@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/student-frontend/static/css/main.478a25c9.css",
-    "main.js": "/student-frontend/static/js/main.5999441b.js",
+    "main.js": "/student-frontend/static/js/main.adb6ef31.js",
     "static/js/787.cbef9b6b.chunk.js": "/student-frontend/static/js/787.cbef9b6b.chunk.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/student-frontend/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/fontawesome-webfont.eot": "/student-frontend/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
@@ -14,11 +14,11 @@
     "static/media/graduation.png": "/student-frontend/static/media/graduation.320529e0a3b0c4b0a1ac.png",
     "index.html": "/student-frontend/index.html",
     "main.478a25c9.css.map": "/student-frontend/static/css/main.478a25c9.css.map",
-    "main.5999441b.js.map": "/student-frontend/static/js/main.5999441b.js.map",
+    "main.adb6ef31.js.map": "/student-frontend/static/js/main.adb6ef31.js.map",
     "787.cbef9b6b.chunk.js.map": "/student-frontend/static/js/787.cbef9b6b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.478a25c9.css",
-    "static/js/main.5999441b.js"
+    "static/js/main.adb6ef31.js"
   ]
 }
