@@ -88,70 +88,108 @@ setTeacher(d1)
 
 return(
 <>
-<div className="container p-4" >
-    <div  style={{background:`linear-gradient(45deg,rgb(255, 209, 207),rgb(255, 209, 207))`,paddingBottom:`10px`,width:`95%`}} className="row rounded 30px mx-4  mt-2">
-        <div style={{width:`1000px`,marginLeft:`1px`}} className="row  ">
-        <div className="col-5 mx-3">
-            <h1 className="font  text-center gradient1 mt-2"><i style={{color:`black`}} className="fa fa-user-plus mt-2" aria-hidden="true"></i>AddStudent</h1>
-            </div>
-            <div className="col-2"></div>
-           
-            <div className="col-1 mt-4">
-             
-                         <div style={{fontSize:`20px`,visibility:`hidden`,color:`green`}} id="spin" className="fa fa-spinner fa-spin"></div>
-                
-            </div>
-            <div className="col-3 mx-3 mt-4">
-
-            <span id="suc" style={{fontSize:`17px`,visibility:`hidden`}} className="text-success"><i  className="fa fa-check-circle" ></i>&nbsp;Registration successful</span>
-          
-            </div>
-
-            
-           
-        </div>
-        <hr></hr>
-        <div className="row p-1 mx-5 ">
-  <div className="col-6">
-   
+<div className="container p-5">
+  <div
+    style={{
+      background: `linear-gradient(45deg,rgb(255, 209, 207),rgb(255, 209, 207))`,
+      paddingBottom: `10px`,
+      width: `95%`,
+    }}
+    className="row rounded 30px mx-4 mt-2"
+  >
+    <div style={{ width: `100%` }} className="row">
+      <div className="col-md-5 mx-auto">
+        <h1 className="font text-center gradient1 mt-2">
+          <i
+            style={{ color: `black` }}
+            className="fa fa-user-plus mt-2"
+            aria-hidden="true"
+          ></i>
+          Add Student
+        </h1>
+      </div>
+    </div>
+    <hr></hr>
+    <div className="row p-1">
+      <div className="col-md-6">
         <div className="form-group mt-2">
-            <input type={"number"} ref={sid} placeholder="Enter Student Id" className="w-75 form-control"></input>
-        </div>   
-        <div className="form-group mt-2">
-            <input type={"text"} ref={sname} placeholder="Enter Student Name" className="w-75 form-control"></input>
-        </div> 
-        <div className="form-group mt-2">
-            <input type={"password"} ref={password} placeholder="Enter Password " className="w-75 form-control"></input>
-        </div> 
-        <div className="form-group mt-2">
-            <input type={"number"} ref={mobno} placeholder="Enter Parent Mobile" className="w-75 form-control"></input>
-        </div> 
-        <div className="form-group mt-2">
-                 <label htmlFor="radio-group">Gender</label>&emsp;
-                <div className="form-check-inline">
-                    <input className="form-check-input" ref={gender} type="radio" name="radio-group" id="radio-option1" value="Male"/>
-                    <label className="form-check-label" htmlFor="radio-option1">
-                    Male
-                    </label>
-                </div>
-                <div className="form-check-inline">
-                    <input className="form-check-input"  ref={gender} type="radio" name="radio-group" id="radio-option2" value="Female"/>
-                    <label className="form-check-label" htmlFor="radio-option2">
-                        Female
-                    </label>
-                </div>
+          <input
+            type={"number"}
+            ref={sid}
+            placeholder="Enter Student Id"
+            className="w-100 form-control"
+          ></input>
         </div>
         <div className="form-group mt-2">
-            <input type={"date"} ref={DateOfBirth} className="w-75 form-control" placeholder="Enter " ></input>
+          <input
+            type={"text"}
+            ref={sname}
+            placeholder="Enter Student Name"
+            className="w-100 form-control"
+          ></input>
         </div>
-  </div>
-  <div className="col-6">
-         <div className="form-group mt-2">
-         <select className="form-select w-75" ref={standard}>
+        <div className="form-group mt-2">
+          <input
+            type={"password"}
+            ref={password}
+            placeholder="Enter Password "
+            className="w-100 form-control"
+          ></input>
+        </div>
+        <div className="form-group mt-2">
+          <input
+            type={"number"}
+            ref={mobno}
+            placeholder="Enter Parent Mobile"
+            className="w-100 form-control"
+          ></input>
+        </div>
+        <div className="form-group mt-2">
+          <label htmlFor="radio-group">Gender</label>&emsp;
+          <div className="form-check-inline">
+            <input
+              className="form-check-input"
+              ref={gender}
+              type="radio"
+              name="radio-group"
+              id="radio-option1"
+              value="Male"
+            />
+            <label className="form-check-label" htmlFor="radio-option1">
+              Male
+            </label>
+          </div>
+          <div className="form-check-inline">
+            <input
+              className="form-check-input"
+              ref={gender}
+              type="radio"
+              name="radio-group"
+              id="radio-option2"
+              value="Female"
+            />
+            <label className="form-check-label" htmlFor="radio-option2">
+              Female
+            </label>
+          </div>
+        </div>
+        <div className="form-group mt-2">
+          <input
+            type={"date"}
+            ref={DateOfBirth}
+            className="w-100 form-control"
+            placeholder="Enter "
+          ></input>
+        </div>
+      </div>
+      <div className="col-md-6">
+        <div className="form-group mt-2">
+          <select className="form-select w-100" ref={standard}>
             <option value="">--Select a Standard--</option>
             <option value="1st">1st</option>
             <option value="2nd">2nd</option>
             <option value="3rd">3rd</option>
+            <option value="4th">4th</option>
             <option value="4th">4th</option>
             <option value="5th">5th</option>
             <option value="6th">6th</option>
@@ -162,19 +200,19 @@ return(
           </select>
         </div> 
         <div className="form-group mt-2">
-            <input type={"number"} ref={fee} className="w-75 form-control" placeholder="Enter fees" ></input>
+            <input type={"number"} ref={fee} className="w-100 form-control" placeholder="Enter fees" ></input>
         </div>
         <div className="form-group mt-2">
-            <input type={"file"} onChange={imageChange}   className="w-75 form-control" ></input>
+            <input type={"file"} onChange={imageChange}   className="w-100 form-control" ></input>
         </div>
         <div className="form-group mt-2">
-            <input type={"number"} ref={maths} className="w-75 form-control" placeholder="Enter Marks in Maths" ></input>
+            <input type={"number"} ref={maths} className="w-100 form-control" placeholder="Enter Marks in Maths" ></input>
         </div>
         <div className="form-group mt-2">
-            <input type={"number"} ref={physics} className="w-75 form-control" placeholder="Enter Marks in Physics" ></input>
+            <input type={"number"} ref={physics} className="w-100 form-control" placeholder="Enter Marks in Physics" ></input>
         </div>
         <div className="form-group mt-2">
-            <input type={"number"} ref={chemistry} className="w-75 form-control" placeholder="Enter Marks in chemistry" ></input>
+            <input type={"number"} ref={chemistry} className="w-100 form-control" placeholder="Enter Marks in chemistry" ></input>
         </div>
         <div style={{marginLeft:`230px`}} className="form-group mt-3 ">
         <button className="btn btn-danger mx-1 ">Reset</button>
@@ -185,7 +223,7 @@ return(
 
 
     </div>
-<></>
+
 
 
     

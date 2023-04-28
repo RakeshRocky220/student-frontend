@@ -23,7 +23,7 @@ const password1=useRef("")
     setState(true);
   };
   const loginTeacher=()=>{
-    axios.post('https://rakeshrocky220.github.io/loginTeacher',{
+    axios.post('http://localhost:2022/loginTeacher',{
       "email":email.current.value,
       "password":password.current.value
     }).then((p)=>{
@@ -46,21 +46,21 @@ const password1=useRef("")
  
   return (
     <>
-    <div className="container">
-      <div className="row">
+    <div className="container-fluid mt-5">
+      <div className="row p-3">
         <div className="col-md-6 mt-5">
-          <img className="img-fluid mx-5" style={{ height:`300px`,width:`300px`}} src={image}></img>
+          <img className="img-fluid mx-5 mt-5" style={{ height:`300px`,width:`300px`}} src={image}></img>
           <h3
             className="font mx-5 mt-5"
             style={{ textShadow: "2px 2px 10px rgb(255, 104, 93)" }}
           >
-            Welcome To new Vision
+            Your Decision is your child's future
           </h3>
         </div>
         <div className="col-md-6 mt-5">
           {state ? (
             <>
-              <div className="container mx-5">
+              <div className="container-fluid mx-5 mt-5">
                 <div className="form-group mt-4 mx-5">
                  
                   <img
@@ -117,7 +117,7 @@ const password1=useRef("")
             </>
           ) : (
             <>
-              <div className="container mx-5">
+              <div className="container-fluid mt-5 mx-5">
                 <div className="form-group mt-4 mx-5 ">
                  
                   <img
