@@ -16,6 +16,12 @@
    */
 
 /*!
+ * ApexCharts v3.39.0
+ * (c) 2018-2023 ApexCharts
+ * Released under the MIT License.
+ */
+
+/*!
  * jQuery JavaScript Library v3.6.0
  * https://jquery.com/
  *
@@ -28,6 +34,14 @@
  *
  * Date: 2021-03-02T17:08Z
  */
+
+/*! svg.draggable.js - v2.2.2 - 2019-01-08
+* https://github.com/svgdotjs/svg.draggable.js
+* Copyright (c) 2019 Wout Fierens; Licensed MIT */
+
+/*! svg.filter.js - v2.0.2 - 2016-02-24
+* https://github.com/wout/svg.filter.js
+* Copyright (c) 2016 Wout Fierens; Licensed MIT */
 
 /**
  * @license React
