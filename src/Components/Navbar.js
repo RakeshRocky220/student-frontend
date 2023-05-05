@@ -6,6 +6,8 @@ import Dashboard from "./Dashboard"
 import AddStudent from "./AddStudent"
 import Attendence from "./Attendence"
 import Students from "./Students"
+import Top from "./Top"
+import StudentDashboard from "./StudentDashboard"
 import './Nav.css'
 const Navbar=()=>{
   
@@ -51,6 +53,9 @@ return(
 </Route>
 <Route path="/login" element={<Login></Login>}>
    
+</Route>
+<Route path="/studentdashboard" element={<StudentDashboard></StudentDashboard>}>
+      <Route path="/studentdashboard/top/:var1" element={<Top></Top>}></Route>
 </Route>
 <Route path="/contact" element={<Contact></Contact>}>
    

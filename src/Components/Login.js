@@ -23,7 +23,7 @@ const password1=useRef("")
     setState(true);
   };
   const loginTeacher=()=>{
-    axios.post('http://localhost:2022/loginTeacher',{
+    axios.post('https://rakeshrocky220.github.io/loginTeacher',{
       "email":email.current.value,
       "password":password.current.value
     }).then((p)=>{
@@ -42,6 +42,26 @@ const password1=useRef("")
     })
 
    
+  }
+
+  const loginstudent=()=>{
+    axios.post('http://localhost:2022/loginstudent',{
+      "sid":sid.current.value,
+      "password":password1.current.value
+    }).then((p)=>{
+     let {data}=p
+    
+     if(data){
+      navigate(`/studentdashboard`,{state:{
+        sid:sid.current.value
+      }})
+     }else{
+      document.getElementById('fai').style.visibility=`visible`
+     }
+ 
+    },(e)=>{
+      console.log(e)
+    })
   }
  
   return (
@@ -150,7 +170,12 @@ const password1=useRef("")
                     className="form-control form-control-sm w-75"
                   ></input>
                 </div>
-                  
+                <p
+                  id="fai"
+                  style={{ color: `red`, visibility: `hidden` }}
+                >
+                  invalid details please try again
+                </p>
                   <div className="form-group mt-2">
                     <button
                       className="btn btn-primary mx-3 mt-3"
@@ -158,7 +183,7 @@ const password1=useRef("")
                     >
                       Login As Teacher
                     </button>
-                    <button className="btn btn-success mx-5 mt-3">Login</button>
+                    <button className="btn btn-success mx-5 mt-3" onClick={loginstudent}>Login</button>
                   </div>
                 </div>
               </>

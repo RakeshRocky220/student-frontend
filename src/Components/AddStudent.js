@@ -36,7 +36,7 @@ const AddStudent=()=>{
 useEffect(
   
     ()=>{
-        document.getElementById(`romantic`).style.display=`none`    
+        
         console.log(var1,`----------`)
         axios.get(`http://localhost:2022/getTeacherBy/${var1}`).then((p)=>{
             console.log(p,`useeffect`)
@@ -49,7 +49,7 @@ setTeacher(d1)
 )
 
     const registerStudent=()=>{
-       document.getElementById(`spin`).style.visibility=`visible`
+       
         setFlag(true)
         axios.post(`http://localhost:2022/saveStudent`,
         {
@@ -61,7 +61,7 @@ setTeacher(d1)
                 "gender":gender.current.value,
                 "dob":DateOfBirth.current.value,
                 "standard":standard.current.value,
-                "fee":sid.current.value,
+                "fee":fee.current.value,
                 "image":image,
                 "maths":maths.current.value,
                 "physics":physics.current.value,
@@ -70,14 +70,15 @@ setTeacher(d1)
             "teacher":teacher
         }
         ).then((pos)=>{
-            document.getElementById(`spin`).style.visibility=`hidden`
+           
+          
             console.log(pos,`studentObject`)
         const {data}=pos
         setStudent(data)
       document.getElementById(`suc`).style.visibility=`visible`
         
         },(e)=>{
-            console.log(e)
+            console.log(e,`errror`)
         })
         setTimeout(()=>{
             document.getElementById(`suc`).style.visibility=`hidden`
@@ -88,14 +89,14 @@ setTeacher(d1)
 
 return(
 <>
-<div className="container p-5">
+<div className="container-fluid ">
   <div
     style={{
       background: `linear-gradient(45deg,rgb(255, 209, 207),rgb(255, 209, 207))`,
       paddingBottom: `10px`,
       width: `95%`,
     }}
-    className="row rounded 30px mx-4 mt-2"
+    className="row rounded 30px mx-4 p-3"
   >
     <div style={{ width: `100%` }} className="row">
       <div className="col-md-5 mx-auto">
@@ -117,7 +118,7 @@ return(
             type={"number"}
             ref={sid}
             placeholder="Enter Student Id"
-            className="w-100 form-control"
+            className="w-100 form-control form-control-sm"
           ></input>
         </div>
         <div className="form-group mt-2">
@@ -125,7 +126,7 @@ return(
             type={"text"}
             ref={sname}
             placeholder="Enter Student Name"
-            className="w-100 form-control"
+            className="w-100 form-control form-control-sm"
           ></input>
         </div>
         <div className="form-group mt-2">
@@ -133,7 +134,7 @@ return(
             type={"password"}
             ref={password}
             placeholder="Enter Password "
-            className="w-100 form-control"
+            className="w-100 form-control form-control-sm"
           ></input>
         </div>
         <div className="form-group mt-2">
@@ -141,7 +142,7 @@ return(
             type={"number"}
             ref={mobno}
             placeholder="Enter Parent Mobile"
-            className="w-100 form-control"
+            className="w-100 form-control form-control-sm"
           ></input>
         </div>
         <div className="form-group mt-2">
@@ -177,14 +178,14 @@ return(
           <input
             type={"date"}
             ref={DateOfBirth}
-            className="w-100 form-control"
+            className="w-100 form-control form-control-sm"
             placeholder="Enter "
           ></input>
         </div>
       </div>
       <div className="col-md-6">
         <div className="form-group mt-2">
-          <select className="form-select w-100" ref={standard}>
+          <select className="form-select w-100 form-select-sm" ref={standard}>
             <option value="">--Select a Standard--</option>
             <option value="1st">1st</option>
             <option value="2nd">2nd</option>
@@ -200,23 +201,26 @@ return(
           </select>
         </div> 
         <div className="form-group mt-2">
-            <input type={"number"} ref={fee} className="w-100 form-control" placeholder="Enter fees" ></input>
+            <input type={"number"} ref={fee} className="w-100 form-control form-control-sm" placeholder="Enter fees" ></input>
         </div>
         <div className="form-group mt-2">
-            <input type={"file"} onChange={imageChange}   className="w-100 form-control" ></input>
+            <input type={"file"} onChange={imageChange}   className="w-100 form-control form-control-sm" ></input>
         </div>
         <div className="form-group mt-2">
-            <input type={"number"} ref={maths} className="w-100 form-control" placeholder="Enter Marks in Maths" ></input>
+            <input type={"number"} ref={maths} className="w-100 form-control form-control-sm" placeholder="Enter Marks in Maths" ></input>
         </div>
         <div className="form-group mt-2">
-            <input type={"number"} ref={physics} className="w-100 form-control" placeholder="Enter Marks in Physics" ></input>
+            <input type={"number"} ref={physics} className="w-100 form-control form-control-sm" placeholder="Enter Marks in Physics" ></input>
         </div>
         <div className="form-group mt-2">
-            <input type={"number"} ref={chemistry} className="w-100 form-control" placeholder="Enter Marks in chemistry" ></input>
+            <input type={"number"} ref={chemistry} className="w-100 form-control form-control-sm" placeholder="Enter Marks in chemistry" ></input>
         </div>
-        <div style={{marginLeft:`230px`}} className="form-group mt-3 ">
-        <button className="btn btn-danger mx-1 ">Reset</button>
+        <div  className="form-group mt-3 ">
+        <button className="btn btn-danger">Reset</button>
            <button className="btn btn-success" onClick={registerStudent}>Register</button>
+        </div>
+        <div className="form-group">
+          <p id="suc" className="text-success" style={{visibility:`hidden`}}>Registration successful</p>
         </div>
   </div>
 </div>

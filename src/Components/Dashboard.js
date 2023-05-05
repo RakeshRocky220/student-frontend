@@ -18,6 +18,7 @@ const Dashboard = () => {
     setB(false);
     setTimeout(() => {
     document.getElementById('tar').style.visibility=`hidden`;
+    document.getElementById('tar').remove();
       navigate(`/dashboard/addstudent/${obj.email}`);
 
     }, 2000);
@@ -43,7 +44,7 @@ const Dashboard = () => {
   <div className="container-fluid mt-5">
     <div className="row">
       <div className="col-lg-12 mt-5">
-        <div style={{top:`15vh`,backgroundColor:`rgb(255, 209, 207)`}} className="row mt-2 mx-1 rounded-30 fixed-top 200px">
+        <div style={{backgroundColor:`rgb(255, 209, 207)`}} className="row mt-2 mx-1 rounded-30 ">
           <div className="col-12 col-md-1 p-3 d-flex justify-content-center">
             <img
               src={obj.image}
@@ -63,13 +64,13 @@ const Dashboard = () => {
               />
             </div>
           </div>
-          <div className="col-12 col-md-1 mt-4 d-flex justify-content-center">
+          <div className="col-12 col-md-1 mt-4 mb-4 d-flex justify-content-center">
             <button className="btn btn-primary btn-sm">Search</button>
           </div>
-          <div className="col-12 col-md-5 mt-4 d-flex justify-content-end">
+          <div className="col-12 col-md-5 mt-2 d-flex justify-content-end p-3">
             <NavLink to={`/dashboard/addstudent/${obj.email}`}>
               <button className="btn btn-dark btn-sm mx-2">
-                Add Stud
+                Insert
               </button>
             </NavLink>
             <NavLink to={`/dashboard/attendence/${obj.headToStandard}`}>
